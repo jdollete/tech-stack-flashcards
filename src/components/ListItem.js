@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { Card, CardSection } from './common';
+import { connect } from 'react-redux';
+import { CardSection } from './common';
+import * as actions from '../actions';
 
 class ListItem extends React.Component {
 
@@ -24,9 +26,9 @@ class ListItem extends React.Component {
 
 const styles = StyleSheet.create({
   titleStyle: {
-    fontSize: 15,
+    fontSize: 18,
     paddingLeft: 15
   }
 });
 
-export default ListItem;
+export default connect(null, actions)(ListItem);
