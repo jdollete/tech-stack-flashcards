@@ -9,10 +9,13 @@ class LibraryList extends React.Component {
   }
 
   render() {
-    return (
-
-    );
+    console.log(this.props);
+    return;
   }
 }
 
-export default connect()(LibraryList);
+const mapStateToProps = state => {
+  return { libraries: state.libraries };
+};
+
+export default connect(mapStateToProps)(LibraryList);
